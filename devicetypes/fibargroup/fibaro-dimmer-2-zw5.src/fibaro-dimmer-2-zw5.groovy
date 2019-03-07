@@ -2,7 +2,7 @@
  *	Fibaro Dimmer 2
  */
 metadata {
-	definition (name: "Fibaro Dimmer 2 ZW5", namespace: "FibarGroup", author: "Fibar Group", runLocally: true, minHubCoreVersion: '000.025.0000', executeCommandsLocally: true, mnmn: "SmartThings", vid:"generic-dimmer-power-energy") {
+	definition (name: "Fibaro Dimmer 2 ZW5 for v3.4", namespace: "FibarGroup", author: "Fibar Group", runLocally: true, minHubCoreVersion: '000.025.0000', executeCommandsLocally: true, mnmn: "SmartThings", vid:"generic-dimmer-power-energy") {
 		capability "Switch"
 		capability "Switch Level"
 		capability "Energy Meter"
@@ -488,7 +488,5 @@ private parameterMap() {[
 				0: "forced leading edge control",
 				1: "forced trailing edge control",
 				2: "control mode selected automatically (based on auto-calibration)"
-		], def: "2", min: 0, max: 2 , title: "Load control mode", descr: "This parameter allows to set the desired load control mode. The device automatically adjusts correct control mode, but the installer may force its change using this parameter."],
-		[key: "levelCorrection", num: 38, size: 2, type: "number", def: 255, min: 0, max: 255 , title: "Brightness level correction for flickering loads",
-		 descr: "Correction reduces spontaneous flickering of some capacitive load (e.g. dimmable LEDs) at certain brightness levels in 2-wire installation. In countries using ripple-control, correction may cause changes in brightness. In this case it is necessary to disable correction or adjust time of correction for flickering loads. (1-254 – duration of correction in seconds. For further information please see the manual)"]
+		], def: "2", min: 0, max: 2 , title: "Load control mode", descr: "This parameter allows to set the desired load control mode. The device automatically adjusts correct control mode, but the installer may force its change using this parameter."]
 ]}
